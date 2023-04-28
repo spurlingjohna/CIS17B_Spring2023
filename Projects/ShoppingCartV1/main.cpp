@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/main.cc to edit this template
- */
-
 /* 
  * File:   main.cpp
- * Author: andrewspurling
- *
- * Created on April 27, 2023, 7:34 PM
+ * Author: Andrew Spurling
+ * Date:   4/27/23
+ * 
  */
 
 #include <cstdlib>

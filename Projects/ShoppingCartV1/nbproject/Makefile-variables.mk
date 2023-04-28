@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=shoppingcartprojectv1
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/shoppingcartprojectv1
+CND_ARTIFACT_NAME_Debug=shoppingcartv1
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/shoppingcartv1
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
-CND_PACKAGE_NAME_Debug=shoppingcartprojectv1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/shoppingcartprojectv1.tar
+CND_PACKAGE_NAME_Debug=shoppingcartv1.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/shoppingcartv1.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=shoppingcartprojectv1
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/shoppingcartprojectv1
+CND_ARTIFACT_NAME_Release=shoppingcartv1
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/shoppingcartv1
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
-CND_PACKAGE_NAME_Release=shoppingcartprojectv1.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/shoppingcartprojectv1.tar
+CND_PACKAGE_NAME_Release=shoppingcartv1.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/shoppingcartv1.tar
 #
 # include compiler specific variables
 #

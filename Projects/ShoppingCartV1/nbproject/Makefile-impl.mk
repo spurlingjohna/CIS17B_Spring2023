@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=ShoppingCartProjectV1
+PROJECTNAME=ShoppingCartV1
 
 # Active Configuration
 DEFAULTCONF=Debug

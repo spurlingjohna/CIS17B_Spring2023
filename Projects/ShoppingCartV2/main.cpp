@@ -38,27 +38,25 @@ int main() {
             cout << "Enter admin name: ";
             cin >> adminName;
 
-            if (admins.find(adminName) != admins.end()) {
-                Admin& admin = admins[adminName];
-                
-                // Admin can interact with the system here
-                // For example, adding items, editing items, etc.
+            auto adminIter = admins.find(adminName);
+            if (adminIter != admins.end()) {
+                Admin& admin = adminIter->second;
             } else {
-                cout << "Admin not found.\n";
+                cout << "Admin not found" << endl;
             }
+            
+            
         } else if (choice == 2) {
             // Log in as user
             string userName;
             cout << "Enter user name: ";
             cin >> userName;
 
-            if (users.find(userName) != users.end()) {
-                User& user = users[userName];
-                
-                // User can interact with the system here
-                // For example, browsing items, adding items to the cart, etc.
+            auto userIter = users.find(userName);
+            if (userIter != users.end()) {
+                User& user = userIter->second;
             } else {
-                cout << "User not found.\n";
+                cout << "User not found" << endl;
             }
         }
     } while (choice != 3);

@@ -44,3 +44,17 @@ void User::viewCart() const {
 void User::placeOrder() {
     cart.emptyCart();
 }
+
+void User::userLogin(map<string, User>& users) {
+    // Log in as user
+    string userName;
+    cout << "Enter user name: ";
+    cin >> userName;
+
+    auto userIter = users.find(userName);
+    if (userIter != users.end()) {
+        User& user = userIter->second;
+    } else {
+        cout << "User not found" << endl;
+    }
+}

@@ -33,31 +33,9 @@ int main() {
         cin >> choice;
 
         if (choice == 1) {
-            // Log in as admin
-            string adminName;
-            cout << "Enter admin name: ";
-            cin >> adminName;
-
-            auto adminIter = admins.find(adminName);
-            if (adminIter != admins.end()) {
-                Admin& admin = adminIter->second;
-            } else {
-                cout << "Admin not found" << endl;
-            }
-            
-            
+            Admin::adminLogin(admins);         
         } else if (choice == 2) {
-            // Log in as user
-            string userName;
-            cout << "Enter user name: ";
-            cin >> userName;
-
-            auto userIter = users.find(userName);
-            if (userIter != users.end()) {
-                User& user = userIter->second;
-            } else {
-                cout << "User not found" << endl;
-            }
+            User::userLogin(users);
         }
     } while (choice != 3);
 

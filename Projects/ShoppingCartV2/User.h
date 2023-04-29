@@ -10,7 +10,8 @@
 
 #include <string>
 #include <vector>
-#include "Item.h"
+#include <map>
+//#include "Item.h"
 #include "Cart.h"
 
 using namespace std;
@@ -26,6 +27,7 @@ public:
     void removeFromCart(int itemID);
     void viewCart() const;
     void placeOrder();
+    static void userLogin(map<string, User>& users);
     
 private:
     string name;

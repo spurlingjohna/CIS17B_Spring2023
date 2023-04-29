@@ -5,7 +5,7 @@
  * 
  */
 
-#include<iostream>
+#include <iostream>
 #include "Admin.h"
 
 using namespace std;
@@ -53,4 +53,18 @@ void Admin::displayItems() const {
 
 vector<Item> Admin::getItems() const {
     return items;
+}
+
+void Admin::adminLogin(map<string, Admin>& admins) {
+    // Log in as admin
+    string adminName;
+    cout << "Enter admin name: ";
+    cin >> adminName;
+
+    auto adminIter = admins.find(adminName);
+    if (adminIter != admins.end()) {
+        Admin& admin = adminIter->second;
+    } else {
+        cout << "Admin not found" << endl;
+    }            
 }

@@ -10,6 +10,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 #include "Item.h"
 
 using namespace std;
@@ -30,6 +31,8 @@ public:
     void displayItems() const;
     
     vector<Item> getItems() const;
+    
+    static void adminLogin(map<string, Admin>& admins);
     
 private:
     string name;

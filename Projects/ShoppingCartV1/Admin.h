@@ -1,8 +1,8 @@
 /* 
  * File:   Admin.h
  * Author: Andrew Spurling
- *
- * Created on April 27, 2023, 7:39 PM
+ * Date:   4/27/23
+ * 
  */
 
 #ifndef ADMIN_H
@@ -10,27 +10,30 @@
 
 #include <string>
 #include <vector>
-#include <"Item.h">
+#include "Item.h"
 
 using namespace std;
 
 class Admin {
 public:
-    Admin(const std::string& adminName);
+    Admin();
+    Admin(const string& adminName);
     
     void addItem(const string& itemName, const string& itemDescription,
-                 double itemPrice, int itemQuantity);
+                 float itemPrice, int itemQuantity);
     
-    void editItem(int itemID, const string& newItemName, const string&,
-                  newItemDescription, double newItemPrice, int newItemQuantity);
+    void editItem(int itemID, const string& newItemName, const string& 
+                  newItemDescription, float newItemPrice, int newItemQuantity);
     
     void removeItem(int itemID);
     
     void displayItems() const;
     
+    vector<Item> getItems() const;
+    
 private:
-    std::string name;
-    std::vector<Item> items;
+    string name;
+    vector<Item> items;
 };
 
 

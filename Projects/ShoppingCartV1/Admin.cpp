@@ -1,8 +1,8 @@
 /* 
- * File:   Admin.h
+ * File:   Admin.cpp
  * Author: Andrew Spurling
- *
- * Created on April 27, 2023, 7:39 PM
+ * Date:   4/27/23
+ * 
  */
 
 #include<iostream>
@@ -10,17 +10,21 @@
 
 using namespace std;
 
-Admin::Admin(const std::string& adminName) : name(adminName) {}
+Admin::Admin() {
+    
+}
+
+Admin::Admin(const string& adminName) : name(adminName) {}
 
 void Admin::addItem(const string& itemName, const string& itemDescription,
-                 double itemPrice, int itemQuantity) {
+                 float itemPrice, int itemQuantity) {
     int newItemID = items.size() + 1;
     Item newItem(newItemID, itemName, itemDescription, itemPrice, itemQuantity);
     items.push_back(newItem);
 }
     
-void Admin::editItem(int itemID, const string& newItemName, const string&,
-                  newItemDescription, double newItemPrice, int newItemQuantity) {
+void Admin::editItem(int itemID, const string& newItemName, const string& newItemDescription, 
+                  float newItemPrice, int newItemQuantity) {
     for (Item& item : items) {
         if (item.getItemID() == itemID) {
             item.setItemName(newItemName);
@@ -33,7 +37,7 @@ void Admin::editItem(int itemID, const string& newItemName, const string&,
 }
 
 void Admin::removeItem(int itemID) {
-    for (size_t i = 0l i < items.size(); ++i) {
+    for (size_t i = 0; i < items.size(); ++i) {
         if (items[i].getItemID() == itemID) {
             items.erase(items.begin() + 1);
             break;
@@ -49,4 +53,8 @@ void Admin::displayItems() const {
              << " Price: $" << item.getItemPrice()
              << " Quantity" << item.getItemQuantity() << endl;
     }
+}
+
+vector<Item> Admin::getItems() const {
+    return items;
 }

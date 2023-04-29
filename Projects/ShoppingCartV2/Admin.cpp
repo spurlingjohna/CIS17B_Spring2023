@@ -10,11 +10,7 @@
 
 using namespace std;
 
-Admin::Admin() {
-    
-}
-
-Admin::Admin(const string& adminName) : name(adminName) {}
+Admin::Admin(const string& adminName) : adminName(adminName) {}
 
 void Admin::addItem(const string& itemName, const string& itemDescription,
                  float itemPrice, int itemQuantity) {

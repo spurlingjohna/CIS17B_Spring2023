@@ -16,7 +16,7 @@ using namespace std;
 
 class Admin {
 public:
-    Admin();
+    Admin() : adminName("") {}
     Admin(const string& adminName);
     
     void addItem(const string& itemName, const string& itemDescription,
@@ -34,6 +34,7 @@ public:
 private:
     string name;
     vector<Item> items;
+    string adminName;
 };
 
 

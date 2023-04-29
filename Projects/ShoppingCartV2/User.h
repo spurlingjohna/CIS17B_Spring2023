@@ -17,7 +17,8 @@ using namespace std;
 
 class User {
 public:
-    User();
+    User() : userName("") {}
+    
     User(const string& userName);
     
     void browseItems(const vector<Item>& items);
@@ -29,6 +30,7 @@ public:
 private:
     string name;
     Cart cart;
+    string userName;
 };
 
 #endif /* USER_H */

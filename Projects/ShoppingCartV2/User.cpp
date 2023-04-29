@@ -10,11 +10,9 @@
 
 using namespace std;
 
-User::User() {
-    
-}
+User::User(const string& userName) : userName(userName) {
 
-User::User(const std::string& userName) : name(userName) {}
+}
 
 void User::browseItems(const vector<Item>& items) {
     for (const Item& item : items) {

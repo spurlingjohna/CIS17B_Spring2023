@@ -10,9 +10,8 @@
 
 using namespace std;
 
-User::User(const string& userName) : userName(userName) {
-
-}
+User::User(const string& userName, const string& password)
+            : userName(userName), password(password) {}
 
 void User::browseItems(const vector<Item>& items) {
     for (const Item& item : items) {
@@ -54,6 +53,16 @@ void User::userLogin(map<string, User>& users) {
     auto userIter = users.find(userName);
     if (userIter != users.end()) {
         User& user = userIter->second;
+        
+        string password;
+        cout << "Enter password: " << endl;
+        cin >> password;
+        
+        if (user.password == password) {
+            cout << "User logged in successfully." << endl;
+        } else {
+            cout << "Incorrect password." << endl;
+        }
     } else {
         cout << "User not found" << endl;
     }

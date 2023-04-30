@@ -17,8 +17,8 @@ using namespace std;
 
 class Admin {
 public:
-    Admin() : adminName("") {}
-    Admin(const string& adminName);
+    Admin() : adminName(""), password("") {}
+    Admin(const string& adminName, const string& password);
     
     void addItem(const string& itemName, const string& itemDescription,
                  float itemPrice, int itemQuantity);
@@ -38,6 +38,7 @@ private:
     string name;
     vector<Item> items;
     string adminName;
+    string password;
 };
 
 

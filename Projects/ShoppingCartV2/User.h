@@ -11,16 +11,14 @@
 #include <string>
 #include <vector>
 #include <map>
-//#include "Item.h"
 #include "Cart.h"
 
 using namespace std;
 
 class User {
 public:
-    User() : userName("") {}
-    
-    User(const string& userName);
+    User() : userName(""), password("") {}   
+    User(const string& userName, const string& password);
     
     void browseItems(const vector<Item>& items);
     void addToCart(int itemID, const vector<Item>& items);
@@ -33,6 +31,7 @@ private:
     string name;
     Cart cart;
     string userName;
+    string password;
 };
 
 #endif /* USER_H */

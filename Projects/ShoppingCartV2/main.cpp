@@ -23,8 +23,8 @@ int main() {
     map<string, Admin> admins;
     map<string, User> users;
     
-    admins.insert(make_pair("Admin1", Admin("Admin1")));
-    users.insert(make_pair("User1", User("User1")));
+    admins.insert(make_pair("Admin1", Admin("Admin1", "admin1password")));
+    users.insert(make_pair("User1", User("User1", "user1password")));
 
     int choice;
 

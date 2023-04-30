@@ -22,9 +22,10 @@ void displayMenu() {
 int main() {
     map<string, Admin> admins;
     map<string, User> users;
+    vector<Item> items;
     
-    admins.insert(make_pair("Admin1", Admin("Admin1", "admin1password")));
-    users.insert(make_pair("User1", User("User1", "user1password")));
+    admins.insert(make_pair("Admin1", Admin("Admin1", "password", items)));
+    users.insert(make_pair("User1", User("User1", "user1password", items)));
 
     int choice;
 
@@ -33,9 +34,9 @@ int main() {
         cin >> choice;
 
         if (choice == 1) {
-            Admin::adminLogin(admins);         
+            Admin::adminLogin(admins, items);         
         } else if (choice == 2) {
-            User::userLogin(users);
+            User::userLogin(users, items);
         }
     } while (choice != 3);
 

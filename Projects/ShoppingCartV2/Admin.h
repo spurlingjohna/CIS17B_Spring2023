@@ -17,22 +17,24 @@ using namespace std;
 
 class Admin {
 public:
-    Admin() : adminName(""), password("") {}
-    Admin(const string& adminName, const string& password);
+    Admin() : adminName(""), password(""), items() {}
+    Admin(const string& adminName, const string& password, vector<Item>& items);
     
-    void addItem(const string& itemName, const string& itemDescription,
-                 float itemPrice, int itemQuantity);
+    void addItem();           
     
-    void editItem(int itemID, const string& newItemName, const string& 
-                  newItemDescription, float newItemPrice, int newItemQuantity);
+    void editItem();
     
-    void removeItem(int itemID);
+    void removeItem();
     
     void displayItems() const;
     
     vector<Item> getItems() const;
     
-    static void adminLogin(map<string, Admin>& admins);
+    static void adminLogin(map<string, Admin>& admins, vector<Item>& items);
+    
+    int adminMenu();
+    
+ //   void setItems(vector<Item>& items);
     
 private:
     string name;

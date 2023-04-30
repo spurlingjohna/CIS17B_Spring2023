@@ -12,26 +12,31 @@
 #include <vector>
 #include <map>
 #include "Cart.h"
+#include "Item.h"
 
 using namespace std;
 
 class User {
 public:
-    User() : userName(""), password("") {}   
-    User(const string& userName, const string& password);
+    User() : userName(""), password(""), items() {}   
     
-    void browseItems(const vector<Item>& items);
-    void addToCart(int itemID, const vector<Item>& items);
-    void removeFromCart(int itemID);
+    User(const string& userName, const string& password, vector<Item>& items);
+    
+    void browseItems();
+    void addToCart();
+    void removeFromCart();
     void viewCart() const;
     void placeOrder();
-    static void userLogin(map<string, User>& users);
+    static void userLogin(map<string, User>& users, const vector<Item>& items);
+    
+    int userMenu();
     
 private:
     string name;
     Cart cart;
     string userName;
     string password;
+    vector<Item> items;
 };
 
 #endif /* USER_H */

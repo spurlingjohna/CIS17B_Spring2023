@@ -10,18 +10,15 @@
 
 using namespace std;
 
-// Admin constructor that initializes an Admin object
-// Takes in the adminName, password, and a vector of items
 Admin::Admin(const string& adminName, const string& password, vector<Item>& items)
             : adminName(adminName), password(password), items(items) {}
 
-// Function to add a new item to the inventory
 void Admin::addItem() {
     string itemName, itemDescription;
     float itemPrice;
     int itemQuantity, itemID;
+    //vector<Item>& items;
 
-    // Prompt user for item details
     cout << "Enter item name: \n";
     cin.ignore();
     getline(cin, itemName);
@@ -39,20 +36,17 @@ void Admin::addItem() {
     cout << "Enter quantity: ";
     cin >> itemQuantity;
     
-    // Add new item to inventory
     int newItemID = items.size() + 1;
     Item newItem(itemID, itemName, itemDescription, itemPrice, itemQuantity);
     items.push_back(newItem);
 }
 
-// Function to edit an existing item in the inventory
 void Admin::editItem() {
     int itemID;
     string newItemName, newItemDescription;
     float newItemPrice;
     int newItemQuantity;
 
-    // Prompt user for item details to edit
     cout << "Enter the item ID to edit: ";
     cin >> itemID;
 
@@ -68,8 +62,7 @@ void Admin::editItem() {
 
     cout << "Enter the new quantity: ";
     cin >> newItemQuantity;
-    
-    // Update item details
+
     for (Item& item : items) {
         if (item.getItemID() == itemID) {
             item.setItemName(newItemName);
@@ -81,15 +74,12 @@ void Admin::editItem() {
     }
 }
 
-// Function to remove item
 void Admin::removeItem() {
     int itemID;
 
-    // Prompt user for item ID to remove
     cout << "Enter the item ID to remove: ";
     cin >> itemID;
 
-    // Remove item from inventory
     for (size_t i = 0; i < items.size(); ++i) {
         if (items[i].getItemID() == itemID) {
             items.erase(items.begin() + i);
@@ -98,7 +88,6 @@ void Admin::removeItem() {
     }
 }
 
-// Display all items in inventory
 void Admin::displayItems() const {
     if (items.size() == 0) {
         cout << "The inventory is empty\n";
@@ -112,12 +101,10 @@ void Admin::displayItems() const {
     }
 }
 
-// Get all items in inventory
 vector<Item> Admin::getItems() const {
     return items;
 }
 
-// Function for Admin to login
 void Admin::adminLogin(map<string, Admin>& admins, vector<Item>& items) {
     // Log in as admin
     string adminName;
@@ -127,17 +114,16 @@ void Admin::adminLogin(map<string, Admin>& admins, vector<Item>& items) {
     auto adminIter = admins.find(adminName);
     if (adminIter != admins.end()) {
         Admin& admin = adminIter->second;
+//        admin.setItems(items);
         
         string password;
         cout << "Enter password: ";
         cin >> password;
         
-        // Check if password is correct
         if (admin.password == password) {
             cout << "Admin logged in successfully." << endl;   
             int adminChoice;
             
-            // Display admin menu and perform chosen action
             do {
                 adminChoice = admin.adminMenu();
                 switch (adminChoice) {
@@ -167,8 +153,6 @@ void Admin::adminLogin(map<string, Admin>& admins, vector<Item>& items) {
         cout << "Admin not found" << endl;
     }
 }
-
-// Display admin menu options
 int Admin::adminMenu() {
     int choice;
     cout << "\nAdmin Menu:\n"

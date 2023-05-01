@@ -13,22 +13,26 @@
 
 class Order {
 public:
-    Order(int orderID, const std::string& userID, const std::vector<Item>& items);
+    // Constructor with arguments
+    Order(int orderID, const string& userID, const vector<Item>& items);
 
+    // Getter functions for order properties
     int getOrderID() const;
-    std::string getUserID() const;
-    std::vector<Item> getOrderItems() const;
-    double getOrderTotal() const;
-    std::string getOrderStatus() const;
+    string getUserID() const;
+    vector<Item> getOrderItems() const;
+    float getOrderTotal() const;
+    string getOrderStatus() const;
 
-    void setOrderStatus(const std::string& newStatus);
+    // Setter function for order status
+    void setOrderStatus(const string& newStatus);
 
 private:
+    // Private member variables
     int id;
-    std::string userID;
-    std::vector<Item> items;
-    double total;
-    std::string status;
+    string userID;
+    vector<Item> items;
+    float total;
+    string status;
 };
 
-#endif // ORDER_H
+#endif /* ORDER_H */

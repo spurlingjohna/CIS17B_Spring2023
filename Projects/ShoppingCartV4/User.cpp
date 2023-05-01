@@ -11,11 +11,10 @@
 
 using namespace std;
 
-// User constructor
 User::User(const string& userName, const string& password, vector<Item>& items)
             : cart(), userName(userName), password(password), items(items) {};
 
-// Allows user to browse available items and add items to cart
+
 void User::browseItems() {
     int itemChoice;
     do {
@@ -49,14 +48,13 @@ void User::browseItems() {
     } while (itemChoice != 0);
 }
 
-// Displays information about an item
 void User::displayItem(const Item& item) {
     cout << "ID: " << item.getItemID()
          << " Name: " << item.getItemName()
          << " Price: $" << item.getItemPrice() << endl;
 }
 
-// Adds an item to the user's cart
+
 void User::addToCart() {
     int itemID;
 
@@ -71,7 +69,6 @@ void User::addToCart() {
     }
 }
 
-// Removes an item from the user's cart
 void User::removeFromCart() {
     int itemID;
 
@@ -80,18 +77,14 @@ void User::removeFromCart() {
 
     cart.removeItem(itemID);
 }
-
-// Displays the items currently in the user's cart
 void User::viewCart() const {
     cart.displayCartItems();
 }
 
-// Empties the user's cart and places an order
 void User::placeOrder() {
     cart.emptyCart();
 }
 
-// Allows user to log in
 void User::userLogin(map<string, User>& users, const vector<Item>& items) {
     string userName;
     cout << "Enter user name: ";
@@ -142,7 +135,6 @@ void User::userLogin(map<string, User>& users, const vector<Item>& items) {
     }
 }
 
-// Menu for user
 int User::userMenu() {
     int choice;
     cout << "\nUser Menu:\n"

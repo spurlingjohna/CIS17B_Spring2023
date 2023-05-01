@@ -14,32 +14,24 @@
 #include "Cart.h"
 #include "Item.h"
 
+using namespace std;
+
 class User {
 public:
-    // Default constructor
-    User() : userName(""), password(""), items() {}
+    User() : userName(""), password(""), items() {}   
     
-    // Constructor with arguments
     User(const string& userName, const string& password, vector<Item>& items);
     
-    // Functions for browsing items and managing the shopping cart
     void browseItems();
     void addToCart();
     void removeFromCart();
     void viewCart() const;
     void placeOrder();
-    
-    // Static function to log in a user
-    static void userLogin(std::map<string, User>& users, const vector<Item>& items);
-    
-    // Function to display item details
+    static void userLogin(map<string, User>& users, const vector<Item>& items);
     void displayItem(const Item& item);
-    
-    // Function to display the user menu and prompt the user to choose an option
     int userMenu();
     
 private:
-    // Private member variables
     string name;
     Cart cart;
     string userName;

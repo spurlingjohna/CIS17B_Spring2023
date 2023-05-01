@@ -5,6 +5,7 @@
  * 
  */
 
+// FileManager.cpp
 #include <fstream>
 #include "FileManager.h"
 
@@ -33,7 +34,6 @@ void FileManager::readUsers(const string& filename, map<string, User>& users) {
     // Implement the read process based on the User class structure
 }
 
-
 void FileManager::writeUsers(const string& filename, const map<string, User>& users) {
     ofstream outFile(filename, ios::binary);
 
@@ -41,7 +41,6 @@ void FileManager::writeUsers(const string& filename, const map<string, User>& us
     // Implement the write process based on the User class structure
 }
 
-// Read items from the binary file
 void FileManager::readItems(const string& filename, vector<Item>& items) {
     ifstream inFile(filename, ios::binary);
 
@@ -54,7 +53,6 @@ void FileManager::readItems(const string& filename, vector<Item>& items) {
     }
 }
 
-// Write items to the binary file
 void FileManager::writeItems(const string& filename, const vector<Item>& items) {
     ofstream outFile(filename, ios::binary);
 

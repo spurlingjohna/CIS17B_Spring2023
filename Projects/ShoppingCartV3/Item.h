@@ -16,6 +16,7 @@ using namespace std;
 
 class Item {
 public:
+    Item() : id(0), name(""), description(""), price(0.0), quantity(0) {}
     Item(int itemID, const string& itemName, const string& itemDescription,
             float itemPrice, int itemQuantity);
     
@@ -24,12 +25,12 @@ public:
     string getItemDescription() const;
     float getItemPrice() const;
     int getItemQuantity() const;
-    
     void setItemName(const string& newName);
     void setItemDescription(const string& newDescription);
     void setItemPrice(float newPprice);
     void setItemQuantity(int newQuantity);
-    
+    void readItem(ifstream& inFile);
+    void writeItem(ofstream& outFile) const;
     
     
 private:

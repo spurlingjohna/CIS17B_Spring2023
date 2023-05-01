@@ -9,6 +9,7 @@
 #include <map>
 #include "Admin.h"
 #include "User.h"
+#include "FileManager.h"
 
 using namespace std;
 
@@ -24,8 +25,10 @@ int main() {
     map<string, User> users;
     vector<Item> items;
     
-    admins.insert(make_pair("Admin1", Admin("Admin1", "password", items)));
-    users.insert(make_pair("User1", User("User1", "user1password", items)));
+    // Read data from binary files
+    FileManager::readAdmins("admins.bin", admins);
+    FileManager::readUsers("users.bin", users);
+    FileManager::readItems("items.bin", items);
 
     int choice;
 
@@ -39,6 +42,13 @@ int main() {
             User::userLogin(users, items);
         }
     } while (choice != 3);
+    
+    // Save data to binary files
+    FileManager::writeAdmins("admins.bin", admins);
+    FileManager::writeUsers("users.bin", users);
+    FileManager::writeItems("items.bin", items);
+    
+        
 
     return 0;
 }

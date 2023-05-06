@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=TimeTrackerV2
+PROJECTNAME=TimeTrackerV3
 
 # Active Configuration
 DEFAULTCONF=Debug

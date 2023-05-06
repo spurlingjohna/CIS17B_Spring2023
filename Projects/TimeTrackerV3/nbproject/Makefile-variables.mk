@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=timetrackerv2
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/timetrackerv2
+CND_ARTIFACT_NAME_Debug=timetrackerv3
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/timetrackerv3
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
-CND_PACKAGE_NAME_Debug=timetrackerv2.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/timetrackerv2.tar
+CND_PACKAGE_NAME_Debug=timetrackerv3.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/timetrackerv3.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=timetrackerv2
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/timetrackerv2
+CND_ARTIFACT_NAME_Release=timetrackerv3
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/timetrackerv3
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
-CND_PACKAGE_NAME_Release=timetrackerv2.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/timetrackerv2.tar
+CND_PACKAGE_NAME_Release=timetrackerv3.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/timetrackerv3.tar
 #
 # include compiler specific variables
 #

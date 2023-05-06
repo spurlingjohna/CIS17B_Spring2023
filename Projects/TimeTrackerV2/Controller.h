@@ -23,6 +23,8 @@ public:
     User* getUser(const string& username) const;
     void deleteUser(const string& username);
     void displayLoginTime(const string& username) const;
+    void saveUserData();
+    void loadUserData();
 
 private:
     vector<unique_ptr<User>> users;

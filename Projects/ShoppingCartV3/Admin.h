@@ -37,7 +37,6 @@ public:
     
 private:
     // Private member variables
-    string name;
     vector<Item> items;
     string adminName;
     string password;

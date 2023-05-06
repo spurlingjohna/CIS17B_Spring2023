@@ -10,7 +10,7 @@
 #include "Controller.h"
 #include "User.h"
 #include "Admin.h"
-#include <thread> 
+#include <thread>
 #include <chrono>
 
 using namespace std;
@@ -21,35 +21,75 @@ void userMenu(Controller* controller, User& user);
 int main() {
     Controller controller;
 
-    // Create sample users and admin
-    controller.createUser("user1", "password1");
-    controller.createUser("admin1", "password1", true);
+    // Load user data from file
+    controller.loadUserData();
 
     string username;
     string password;
+    int choice;
+    bool quit = false;
 
-    cout << "Enter your username: ";
-    cin >> username;
+    while (!quit) {
+        cout << "1. Login\n";
+        cout << "2. Register\n";
+        cout << "3. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
 
-    cout << "Enter your password: ";
-    cin >> password;
+        switch (choice) {
+            case 1:
+                {
+                    // Existing login process
+                    cout << "Enter your username: ";
+                    cin >> username;
 
-    User* user = controller.getUser(username);
+                    cout << "Enter your password: ";
+                    cin >> password;
 
-    if (user && user->getPassword() == password) {
-        user->login();
+                    User* user = controller.getUser(username);
 
-        Admin* admin = dynamic_cast<Admin*>(user);
-        if (admin) {
-            admin->adminMenu(&controller, *admin);
-        } else {
-            user->userMenu(&controller, *user);
+                    if (user && user->getPassword() == password) {
+                        user->login();
+
+                        Admin* admin = dynamic_cast<Admin*>(user);
+                        if (admin) {
+                            admin->adminMenu(&controller, *admin);
+                        } else {
+                            user->userMenu(&controller, *user);
+                        }
+                    } else {
+                        cout << "Invalid username or password.\n";
+                    }
+                }
+                break;
+            case 2:
+                {
+                    // Registration process
+                    bool isAdmin;
+
+                    cout << "Enter a new username: ";
+                    cin >> username;
+
+                    cout << "Enter a new password: ";
+                    cin >> password;
+
+                    cout << "Is admin? (1 for yes, 0 for no): ";
+                    cin >> isAdmin;
+
+                    controller.createUser(username, password, isAdmin);
+                    controller.saveUserData(); // Save user data after registration
+                    cout << "User registered successfully.\n";
+                }
+                break;
+            case 3:
+                // Exit
+                quit = true;
+                break;
+            default:
+                cout << "Invalid choice.\n";
+                break;
         }
-    } else {
-        cout << "Invalid username or password.\n";
     }
 
     return 0;
 }
-
-

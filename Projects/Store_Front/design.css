@@ -1,0 +1,99 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 11, 2023, 4:43:37 PM
+    Author     : andrewspurling
+*/
+
+body { 
+  background-color: #e5e5e5;
+  font-family: Arial, sans-serif;
+  font-size:        16px;
+  margin:           0px;
+  height: auto; 
+  width: 100%; 
+  padding: 20px;
+}
+
+h1 {
+  font-size:        150%;
+  color:            #333333;
+  text-align: center; 
+}
+
+h2{
+    color:            #666666;
+}
+
+h3{
+    color:            #666666;
+}
+
+#list{
+    color:            #333333;
+    text-align: left; 
+}
+
+nav {
+    background-color: #ffffff;
+	margin: 20px 0px;
+}
+
+nav ul {
+	margin: 0px;
+	list-style-type: none;
+	padding: 10px 0px;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+	color: #333333;
+	border-bottom: 1px solid #cccccc;
+	font-weight: bold;
+	text-transform: none;
+}
+
+li.selected {
+	background-color: #f1f1f1;
+}
+
+a:link {
+  color:            #0066cc;
+  text-decoration:  none;
+  border-bottom:    1px dotted #0066cc;
+}
+
+a:visited {
+  color:            #003366;
+  text-decoration:  none;
+  border-bottom:    1px dotted #003366;
+}
+
+header{
+  background-color: #ffffff;
+  margin: 20px 0px;
+  height:           120px;
+  width: 100%; 
+}
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}

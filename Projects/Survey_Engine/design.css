@@ -1,0 +1,104 @@
+/* 
+    Created on : Jun 2, 2023, 5:01:44 PM
+    Author     : Andrew Spurling
+*/
+
+/* Base rules for entire document */
+body { 
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  font-size:        16px;
+  margin:           0px;
+  height: 100vh; 
+  width: 100vw; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Block: heading */
+.heading {
+  color: #333;
+  text-align: center; 
+}
+
+.heading--1 {
+  font-size:        2rem;
+}
+
+.heading--2, .heading--3 {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* Block: list */
+.list{
+    color: #333;
+    text-align: center; 
+}
+
+/* Block: nav */
+.nav {
+    background-color: #fafafa;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav__item {
+    padding: 0 15px;
+}
+
+.nav__link:link, .nav__link:visited {
+	color: #333;
+	border-bottom: none;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav__item--selected {
+	color: #007BFF;
+}
+
+/* Block: link */
+.link:link {
+  color:            #007BFF;
+  text-decoration:  none;
+  border-bottom:    thin solid #007BFF;
+}
+
+.link:visited {
+  color:            #007BFF;
+  text-decoration:  none;
+  border-bottom:    thin solid #007BFF;
+}
+
+/* Block: header */
+.header{
+  background-color: #007BFF;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Block: table */
+.table {
+  font-family: 'Arial', sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.table__cell, .table__header {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 10px;
+}
+
+.table__row:nth-child(even) {
+  background-color: #f2f2f2;
+}
